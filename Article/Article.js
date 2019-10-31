@@ -84,7 +84,40 @@ const data = [{
         thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
-    }
+    },
+    {
+        title: 'I have a particular set of skills',
+        date: 'May 25th, 2019',
+        firstParagraph: `I have a very particular set of skills. I will find you and I will kill you. I have a very particular set of skills. 
+        I will find you and I will kill you.
+        I have a very particular set of skills. I will find you and I will kill you.I have a very particular set of skills.
+         I will find you and I will kill you.I have a very particular set of skills. I will find you and I will kill you.`,
+
+        secondParagraph: `I have a very particular set of skills. I will find you and I will kill you. I have a very particular set of skills. 
+        I will find you and I will kill you.
+        I have a very particular set of skills. I will find you and I will kill you.I have a very particular set of skills.
+         I will find you and I will kill you.I have a very particular set of skills. I will find you and I will kill you.`,
+
+        thirdParagraph: `I have a very particular set of skills. I will find you and I will kill you. I have a very particular set of skills. 
+        I will find you and I will kill you.
+        I have a very particular set of skills. I will find you and I will kill you.I have a very particular set of skills.
+         I will find you and I will kill you.I have a very particular set of skills. I will find you and I will kill you.`,
+    },
+    {
+    title: 'What the cat says',
+    date: 'May 26th, 2019',
+    firstParagraph: `meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,
+    meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,
+    meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,`,
+
+    secondParagraph: `meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,
+    meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,
+    meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,`,
+
+    thirdParagraph: `meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,
+    meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,
+    meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,meow,`,
+}
 ];
 
 //  Step 1: Create a function that creates a component. You will want your component to look like the template below: 
@@ -153,8 +186,8 @@ function maker(title, date, pOne, pTwo, pThree) {
 
 // Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 
-let newComponent = data.map((e) => {
-    articles.appendChild(maker(data[0].title, data[0].date, data[0].firstParagraph, data[0].secondParagraph, data[0].thirdParagraph));
+let newComponent = data.map((article) => {
+    articles.appendChild(maker(article.title, article.date, article.firstParagraph, article.secondParagraph, article.thirdParagraph));
     return articles;
 });
 

@@ -36,24 +36,24 @@ let menuItems = [
 const header = document.querySelector(".header");
 
 function createMenu(array) {
-    // list items
+
     const menu = document.createElement("div");
     const menuList = document.createElement("ul");
 
-    // create structure
+
     menu.appendChild(menuList);
 
-    // this loop passes each array item
+
     array.forEach(item => {
         const menuLi = document.createElement("li");
         menuLi.textContent = item;
         menuList.appendChild(menuLi);
     });
 
-    // apply styles
+
     menu.classList.add("menu");
 
-    // add event handlers
+
     const menuBtn = document.querySelector(".menu-button");
     menuBtn.addEventListener("click", () => {
         menu.classList.toggle("menu--open");
